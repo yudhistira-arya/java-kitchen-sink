@@ -1,31 +1,22 @@
-buildscript {
-    repositories {
-        jcenter()
-    }
-}
-
 plugins {
-    id 'java'
     id 'idea'
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-}
-
 allprojects {
+    apply plugin: "java"
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
     dependencies {
         compile(
                 "org.jetbrains:annotations:${jetbrainAnnotations_ver}",
                 "com.google.guava:guava:${guava_ver}",
-        )
-
-        dependencies {
-            testImplementation('org.junit.jupiter:junit-jupiter:5.5.1')
-        }
+       )
 
         test {
             useJUnitPlatform()

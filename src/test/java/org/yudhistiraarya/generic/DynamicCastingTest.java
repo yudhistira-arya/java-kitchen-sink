@@ -9,6 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class DynamicCastingTest {
 
+    @SuppressWarnings("unchecked")
     @Test
     void shouldDoDynamicCastOnList() {
         final String expected1 = "Banana";
