@@ -1,0 +1,54 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+allprojects {
+    dependencies {
+        compile(
+                "org.jetbrains:annotations:${jetbrainAnnotations_ver}",
+                "com.google.guava:guava:${guava_ver}",
+        )
+
+        dependencies {
+            testImplementation('org.junit.jupiter:junit-jupiter:5.5.1')
+        }
+
+        test {
+            useJUnitPlatform()
+            testLogging {
+                events "passed", "skipped", "failed"
+            }
+        }
+
+        testImplementation(
+                "org.mockito:mockito-all:${mockito_ver}",
+                "org.assertj:assertj-core:${assertj_ver}",
+                "org.junit.jupiter:junit-jupiter:${junit_ver}"
+        )
+    }
+
+    test {
+        useJUnitPlatform()
+        testLogging {
+            events "passed", "skipped", "failed"
+        }
+    }
+}
+
+task allDeps(type: DependencyReportTask) {}
+
+task createGradleWrapper(type: Wrapper) {}
