@@ -1,4 +1,45 @@
-service {
-    // menu
-    // order
+syntax = "proto3";
+
+option java_package = "org.yudhistiraarya";
+option java_generate_equals_and_hash = true;
+
+message MenuRequest {
+    string id = 1;
+}
+
+message MenuResponse {
+    string id = 1;
+    // underscore here is the convention
+    repeated NasiLemakMenu menu = 2;
+}
+
+message NasiLemakMenu {
+    string nasi_lemak_id = 1;
+    string nasi_lemak_name = 2;
+}
+
+message NasiLemak {
+    string id = 1;
+    string name = 2;
+    repeated NasiLemakContent content = 3;
+}
+
+enum NasiLemakContent {
+    // ENUM index must start from 0
+    SAMBAL = 0;
+    NASI = 1;
+    EGG = 2;
+    IKANBILIS = 3;
+    CHICKEN = 4;
+    RENDANG = 5;
+}
+
+message OrderRequest {
+    string id = 1;
+    string nasi_lemak_id = 2;
+}
+
+message OrderResponse {
+    string id = 1;
+    NasiLemak nasi_lemak = 2;
 }
