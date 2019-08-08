@@ -1,2 +1,4 @@
 rootProject.name = 'java-kitchen-sink'
 include 'grpc'
+include 'generics'
+include 'dynamicproxies'

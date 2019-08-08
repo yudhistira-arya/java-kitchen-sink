@@ -1,6 +1,5 @@
 package org.yudhistiraarya.generic;
 
-import java.util.Collection;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
