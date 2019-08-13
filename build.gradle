@@ -16,7 +16,8 @@ allprojects {
         compile(
                 "org.jetbrains:annotations:${jetbrainAnnotations_ver}",
                 "com.google.guava:guava:${guava_ver}",
-       )
+                "org.slf4j:slf4j-api:${slf4j_ver}"
+        )
 
         test {
             useJUnitPlatform()

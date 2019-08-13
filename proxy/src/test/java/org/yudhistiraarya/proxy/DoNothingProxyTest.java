@@ -26,7 +26,7 @@ class DoNothingProxyTest {
         final List<String> copyList = new ArrayList<>(this.originalSet);
 
         this.proxiedSet.forEach(value -> {
-            assertThat(value + "a").isEqualTo(copyList.get(adder.intValue()));
+            assertThat(value).isEqualTo(copyList.get(adder.intValue()));
             adder.increment();
         });
     }

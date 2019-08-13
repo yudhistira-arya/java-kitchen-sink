@@ -1,0 +1,3 @@
+// for future, standalone use
+include 'plugin-api'
+include 'sample-plugin'

@@ -1,4 +1,7 @@
 rootProject.name = 'java-kitchen-sink'
 include 'grpc'
 include 'generics'
-include 'dynamicproxies'
+include 'proxy'
+include 'dynamic-plugin'
+include 'dynamic-plugin:sample-plugin'
+include 'dynamic-plugin:plugin-api'

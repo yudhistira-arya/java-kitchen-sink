@@ -1,0 +1,5 @@
+dependencies {
+    compile(
+            project(":dynamic-plugin:plugin-api")
+    )
+}
