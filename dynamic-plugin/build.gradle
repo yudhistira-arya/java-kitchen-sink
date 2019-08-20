@@ -1,5 +1,8 @@
 dependencies {
-    compile(
-            project(":dynamic-plugin:plugin-api")
+    implementation(
+            project(":dynamic-plugin:plugin-api"),
+            "org.ow2.asm:asm:${asm_ver}",
+            "org.ow2.asm:asm-util:${asm_ver}",
+            "org.apache.commons:commons-lang3:${lang3_ver}",
     )
 }

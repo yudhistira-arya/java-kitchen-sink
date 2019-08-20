@@ -2,7 +2,7 @@ plugins {
     id 'idea'
 }
 
-allprojects {
+subprojects {
     apply plugin: "java"
 
     sourceCompatibility = 1.8
