@@ -27,13 +27,6 @@ class SampleAsync {
                     if (!response.isSuccessful()) {
                         completableFuture.completeExceptionally(new IOException("Unexpected code " + response));
                     }
-
-//                    final Headers responseHeaders = response.headers();
-//                    for (int i = 0, size = responseHeaders.size(); i < size; i++) {
-//                        System.out.println(responseHeaders.name(i) + ": " + responseHeaders.value(i));
-//                    }
-
-                    //noinspection ConstantConditions
                     completableFuture.complete(responseBody.string());
                 }
             }
