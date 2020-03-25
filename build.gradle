@@ -5,8 +5,8 @@ plugins {
 subprojects {
     apply plugin: "java"
 
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+    sourceCompatibility = 11
+    targetCompatibility = 11
 
     repositories {
         mavenCentral()
@@ -18,13 +18,6 @@ subprojects {
                 "com.google.guava:guava:${guava_ver}",
                 "org.slf4j:slf4j-api:${slf4j_ver}"
         )
-
-        test {
-            useJUnitPlatform()
-            testLogging {
-                events "passed", "skipped", "failed"
-            }
-        }
 
         testImplementation(
                 "org.mockito:mockito-all:${mockito_ver}",
